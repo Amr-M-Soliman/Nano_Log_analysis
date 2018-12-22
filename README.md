@@ -1,5 +1,5 @@
 ## Setup and run the code ##
-The code is written in **python3**.to run it use **CMD** 
+The code is written in **python3**.to run it use this command line
 
  `python news_query.py`
     
