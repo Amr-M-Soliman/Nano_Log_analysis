@@ -31,8 +31,11 @@ FROM top_articles
 LIMIT 3;
  ```
  ### The Output ##
- First_Query: [('Candidate is jerk, alleges rival', 338647),('Bears love berries, alleges bear', 253801), 
- 	       ('Bad things gone, say good people', 170098)]
+ ```
+	('Candidate is jerk, alleges rival', 338647),
+	('Bears love berries, alleges bear', 253801),
+	('Bad things gone, say good people', 170098)
+```
     
 ## Second Query: Who are the most popular article authors of all time? ##
 ```
@@ -44,8 +47,12 @@ GROUP BY 1
 ORDER BY 2 DESC;
  ```
  ### The Output ##
- Second_Query: [('Ursula La Multa', 507594), ('Rudolf von Treppenwitz', 423457),('Anonymous Contributor', 170098),
- 		('Markoff Chaney', 84557)]
+```
+	('Ursula La Multa', 507594), 
+	('Rudolf von Treppenwitz', 423457),
+	('Anonymous Contributor', 170098),
+ 	('Markoff Chaney', 84557)
+```
 		
 ## Third Query: Who are the most popular article authors of all time? ##
 Creat a **subquery** that counts the errors in log table for each day.Errors are the status rows that are not like ** '200 OK'. **
@@ -80,5 +87,7 @@ GROUP BY 1,2
 HAVING ROUND((err.err_sum*1.0 / req.req_sum)*100,2) > 1 ;
 ```
 ### The Output ##
- Third_Query: [2016-07-17 00:00:00+02, 2.25]
+ ```
+ 2016-07-17 00:00:00+02, 2.25
+ ```
 
