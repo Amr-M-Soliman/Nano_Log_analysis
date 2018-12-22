@@ -31,8 +31,8 @@ FROM top_articles
 LIMIT 3;
  ```
  ### The Output ##
- ```
-	('Candidate is jerk, alleges rival', 338647),
+```
+    ('Candidate is jerk, alleges rival', 338647),
 	('Bears love berries, alleges bear', 253801),
 	('Bad things gone, say good people', 170098)
 ```
@@ -88,6 +88,6 @@ HAVING ROUND((err.err_sum*1.0 / req.req_sum)*100,2) > 1 ;
 ```
 ### The Output ##
  ```
- 2016-07-17 00:00:00+02, 2.25
+ 	2016-07-17 00:00:00+02, 2.25
  ```
 
