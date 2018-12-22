@@ -33,8 +33,8 @@ LIMIT 3;
  ### The Output ##
 ```
     ('Candidate is jerk, alleges rival', 338647),
-	('Bears love berries, alleges bear', 253801),
-	('Bad things gone, say good people', 170098)
+    ('Bears love berries, alleges bear', 253801),
+    ('Bad things gone, say good people', 170098)
 ```
     
 ## Second Query: Who are the most popular article authors of all time? ##
@@ -48,10 +48,10 @@ ORDER BY 2 DESC;
  ```
  ### The Output ##
 ```
-	('Ursula La Multa', 507594), 
-	('Rudolf von Treppenwitz', 423457),
-	('Anonymous Contributor', 170098),
- 	('Markoff Chaney', 84557)
+    ('Ursula La Multa', 507594), 
+    ('Rudolf von Treppenwitz', 423457),
+    ('Anonymous Contributor', 170098),
+    ('Markoff Chaney', 84557)
 ```
 		
 ## Third Query: Who are the most popular article authors of all time? ##
@@ -88,6 +88,6 @@ HAVING ROUND((err.err_sum*1.0 / req.req_sum)*100,2) > 1 ;
 ```
 ### The Output ##
  ```
- 	2016-07-17 00:00:00+02, 2.25
+     (2016-07-17 00:00:00+02, 2.25)
  ```
 
