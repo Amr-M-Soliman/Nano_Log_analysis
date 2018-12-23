@@ -14,10 +14,10 @@ News query is a code written in **python** which helps you to get the results of
 ```
 **Windows**
 
-Download the suitable installer from [downloads section](https://github.com/Amr-M-Soliman/Nano_Log_analysis.git) of the official Python website.
+Download the suitable installer from [downloads section](https://www.python.org/downloads/windows/) of the official Python website.
 
 ### Run the code ###
-Download the code or use **Git** to clone the project by [url](https://github.com/Amr-M-Soliman/Nano_Log_analysis.git). 
+Download the code or use **Git** to clone the project by https://github.com/Amr-M-Soliman/Nano_Log_analysis.git. 
 Run **Shell** or **CMD** and **cd** to the project directory
 ```
     python news_query.py
