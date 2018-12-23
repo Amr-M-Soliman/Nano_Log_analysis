@@ -64,27 +64,27 @@ ORDER BY 2 DESC;
 Creat a **subquery** that counts the errors in log table for each day.Errors are the status rows that are not like ** '200 OK'. **
 ```
 SELECT DATE_TRUNC('day',time)AS err_time ,COUNT(status) AS err_sum 
-			FROM log 
-            WHERE status !='200 OK' 
-			GROUP BY 1
+		FROM log 
+            	WHERE status !='200 OK' 
+		GROUP BY 1
 ```
 Then  create a second subquery that count all status rows in log table for each day.
 ```
 SELECT DATE_TRUNC('day',time)AS req_time ,COUNT(status) AS req_sum 
-			FROM log 
-            GROUP BY 1
+		FROM log 
+            	GROUP BY 1
 ```
 By using those two queries,you can get the days which more than 1% of requests lead to errors.
 Using this method `ROUND((err.err_sum*1.0 / req.req_sum)*100,2)` to get the errors percentage and round them up to 2 decimals
 ```
 WITH 
 	err AS (SELECT DATE_TRUNC('day',time)AS err_time,COUNT(status) AS err_sum 
-			FROM log 
-            WHERE status !='200 OK' 
-			GROUP BY 1 ) ,
+		FROM log 
+           	WHERE status !='200 OK' 
+		GROUP BY 1 ) ,
 	req AS (SELECT DATE_TRUNC('day',time)AS req_time ,COUNT(status) AS req_sum 
-			FROM log 
-            GROUP BY 1  )  
+		FROM log 
+           	GROUP BY 1  )  
 SELECT req_time,ROUND((err.err_sum*1.0 / req.req_sum)*100,2) AS errors_percentage
 FROM req
 JOIN err
