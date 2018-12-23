@@ -1,7 +1,27 @@
-## Setup and run the code ##
-The code is written in **python3**.to run it use this command line
+# News Query #
+News query is a code written in ** python ** which helps you to get the results of the three following queries:
 
- `python news_query.py`
+* What are the most popular three articles of all time? 
+* Who are the most popular article authors of all time?
+* Who are the most popular article authors of all time?
+
+## Setup and run the code ##
+### Installation of python ###
+** Ubuntu**
+```
+    $ sudo apt-get update
+    $ sudo apt-get install python3.6
+```
+** Windows **
+
+Download the suitable installer from [downloads section](https://github.com/Amr-M-Soliman/Nano_Log_analysis.git) of the official Python website.
+
+### Run the code ###
+Download the code or use ** Git ** to clone the project by [url](https://github.com/Amr-M-Soliman/Nano_Log_analysis.git). 
+Run ** Shell ** or ** CMD ** and ** cd ** to the project directory
+```
+    python news_query.py
+```
     
 ## Create a View ##
 You may create a view named **'top_articles'** Includes (**author_id ,articles_id ,articles_title and `count(articles.slug))`**.
@@ -30,12 +50,6 @@ SELECT article_name,views
 FROM top_articles 
 LIMIT 3;
  ```
- ### The Output ##
-```
-    ('Candidate is jerk, alleges rival', 338647),
-    ('Bears love berries, alleges bear', 253801),
-    ('Bad things gone, say good people', 170098)
-```
     
 ## Second Query: Who are the most popular article authors of all time? ##
 ```
@@ -46,14 +60,6 @@ ON u.id = ta.author_id
 GROUP BY 1 
 ORDER BY 2 DESC;
  ```
- ### The Output ##
-```
-    ('Ursula La Multa', 507594), 
-    ('Rudolf von Treppenwitz', 423457),
-    ('Anonymous Contributor', 170098),
-    ('Markoff Chaney', 84557)
-```
-		
 ## Third Query: Who are the most popular article authors of all time? ##
 Creat a **subquery** that counts the errors in log table for each day.Errors are the status rows that are not like ** '200 OK'. **
 ```
@@ -86,8 +92,4 @@ ON err_time = req_time
 GROUP BY 1,2
 HAVING ROUND((err.err_sum*1.0 / req.req_sum)*100,2) > 1 ;
 ```
-### The Output ##
- ```
-     (2016-07-17 00:00:00+02, 2.25)
- ```
 
