@@ -1,5 +1,5 @@
 # News Query #
-News query is a code written in ** python ** which helps you to get the results of the three following queries:
+News query is a code written in **python** which helps you to get the results of the three following queries:
 
 * What are the most popular three articles of all time? 
 * Who are the most popular article authors of all time?
@@ -7,18 +7,18 @@ News query is a code written in ** python ** which helps you to get the results 
 
 ## Setup and run the code ##
 ### Installation of python ###
-** Ubuntu**
+**Ubuntu**
 ```
     $ sudo apt-get update
     $ sudo apt-get install python3.6
 ```
-** Windows **
+**Windows**
 
 Download the suitable installer from [downloads section](https://github.com/Amr-M-Soliman/Nano_Log_analysis.git) of the official Python website.
 
 ### Run the code ###
-Download the code or use ** Git ** to clone the project by [url](https://github.com/Amr-M-Soliman/Nano_Log_analysis.git). 
-Run ** Shell ** or ** CMD ** and ** cd ** to the project directory
+Download the code or use **Git** to clone the project by [url](https://github.com/Amr-M-Soliman/Nano_Log_analysis.git). 
+Run **Shell** or **CMD** and **cd** to the project directory
 ```
     python news_query.py
 ```
